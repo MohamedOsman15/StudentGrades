@@ -5,7 +5,7 @@ export const SignIn = (data) => {
     const res = Client.post('/signin', data)
 
     localStorage.setItem('token', res.data.token)
-    res.data.user
+    return res.data.user
   } catch (err) {
     throw err
   }
