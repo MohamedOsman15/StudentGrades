@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import NavBar from './components/NavBar'
 import Login from './components/Login'
 import Register from './components/Register'
+import Home from './components/Home'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(true)
@@ -22,6 +23,7 @@ function App() {
 
       <main>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route
             path="/signIn"
