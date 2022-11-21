@@ -6,6 +6,7 @@ const Register = () => {
   const navigate = useNavigate()
   const initialValues = {
     email: '',
+    schoolId: '',
     password: '',
     confirmPassword: ''
   }
@@ -43,6 +44,18 @@ const Register = () => {
             onChange={handleChange}
             value={formValues.email}
             placeholder="example@example.com"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor='SchoolId'>School Id:</label>
+          <input
+            type="text"
+            id='schoolId'
+            name="schoolId"
+            onChange={handleChange}
+            value={formValues.schoolId}
+            placeholder="Enter School Id Number"
             required
           />
         </div>
