@@ -21,7 +21,9 @@ const NavBar = (props) => {
             </Link>
           </div>
         ) : (
-          <Link to="/signin">Sign In</Link>
+          <Link className="links" to="/signin">
+            Sign In
+          </Link>
         )}
       </div>
     </nav>
