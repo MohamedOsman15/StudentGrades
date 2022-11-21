@@ -81,7 +81,7 @@ const Register = () => {
             placeholder="Confirm Password"
           />
         </div>
-        <div>
+        <div className={pass}>
           <p>Passwords must match</p>
         </div>
         <button className="btn">Submit</button>
