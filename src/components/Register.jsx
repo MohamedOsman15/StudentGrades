@@ -25,7 +25,7 @@ const Register = () => {
       })
       setPass('matched')
       // setValues(initialValues)
-      navigate('/signin')
+      navigate('/')
     } else {
       setPass('unmatched')
     }
