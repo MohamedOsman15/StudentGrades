@@ -11,3 +11,42 @@
 .navbar .links {
   padding: 1rem;
 }
+
+.register {
+  text-align: center;
+}
+
+
+.registerForm {
+  background-color: white;
+  border: solid 5px black;
+  margin: 10px 800px;
+  padding-left: 0;
+}
+
+.login {
+  text-align: center;
+}
+
+.loginForm {
+  background-color: white;
+  border: solid 5px black;
+  margin: 10px 800px;
+  padding-left: 0;
+}
+
+ul {
+  padding: 0px;
+}
+
+.matched {
+  display: none;
+}
+
+.unmatched {
+  color: red;
+}
+
+button {
+  margin-bottom: 15px;
+}
