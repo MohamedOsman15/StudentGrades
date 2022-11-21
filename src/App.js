@@ -1,6 +1,7 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { CheckSession } from './services/auth'
 import NavBar from './components/NavBar'
 import Login from './components/Login'
 import Register from './components/Register'
@@ -14,6 +15,19 @@ function App() {
     toggleAuthenticated(false)
     setUser(null)
   }
+
+  const checkToken = async () => {
+    const user = await CheckSession()
+    setUser(user)
+    toggleAuthenticated(true)
+  }
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      checkToken()
+    }
+  }, [])
 
   return (
     <div className="App">
