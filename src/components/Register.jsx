@@ -24,7 +24,7 @@ const Register = () => {
         password: formValues.password
       })
       setPass('matched')
-      setValues(initialValues)
+      // setValues(initialValues)
       navigate('/signin')
     } else {
       setPass('unmatched')
@@ -48,10 +48,10 @@ const Register = () => {
           />
         </div>
         <div>
-          <label htmlFor='SchoolId'>School Id:</label>
+          <label htmlFor="SchoolId">School Id:</label>
           <input
             type="text"
-            id='schoolId'
+            id="schoolId"
             name="schoolId"
             onChange={handleChange}
             value={formValues.schoolId}
@@ -62,7 +62,7 @@ const Register = () => {
         <div>
           <label htmlFor="password">Password:</label>
           <input
-            type="text"
+            type="password"
             id="password"
             name="password"
             onChange={handleChange}
@@ -73,7 +73,7 @@ const Register = () => {
         <div>
           <label htmlFor="confirmPassword">Confirm Password</label>
           <input
-            type="text"
+            type="password"
             id="confirmPassword"
             name="confirmPassword"
             onChange={handleChange}

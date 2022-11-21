@@ -10,6 +10,8 @@ Client.interceptors.request.use(
     if (token) {
       config.headers['authorization'] = `Bearer ${token}`
     }
+
+    return config
   },
   (error) => Promise.reject(error)
 )
