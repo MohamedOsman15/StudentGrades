@@ -32,12 +32,13 @@ const Register = () => {
 
   return (
     <div className="register">
-      <h1>Register For A New Account</h1>
+      <h1>Register</h1>
       <form onSubmit={(e) => handleSubmit(e)} className="registerForm">
         <div>
-          <h3>Email:</h3>
+          <label htmlFor="email">Email:</label>
           <input
             type="text"
+            id="email"
             name="email"
             onChange={handleChange}
             value={formValues.email}
@@ -46,9 +47,10 @@ const Register = () => {
           />
         </div>
         <div>
-          <h3>Password:</h3>
+          <label htmlFor="password">Password:</label>
           <input
             type="text"
+            id="password"
             name="password"
             onChange={handleChange}
             value={formValues.password}
@@ -56,9 +58,10 @@ const Register = () => {
           />
         </div>
         <div>
-          <h3>Confirm Password</h3>
+          <label htmlFor="confirmPassword">Confirm Password</label>
           <input
             type="text"
+            id="confirmPassword"
             name="confirmPassword"
             onChange={handleChange}
             value={formValues.confirmPassword}
@@ -68,7 +71,7 @@ const Register = () => {
         <div>
           <p>Passwords must match</p>
         </div>
-        <button>Submit</button>
+        <button className="btn">Submit</button>
       </form>
     </div>
   )

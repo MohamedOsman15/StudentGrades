@@ -6,7 +6,7 @@ import Login from './components/Login'
 import Register from './components/Register'
 
 function App() {
-  const [authenticated, toggleAuthenticated] = useState(false)
+  const [authenticated, toggleAuthenticated] = useState(true)
   const [user, setUser] = useState(null)
 
   const signOut = () => {
@@ -20,18 +20,20 @@ function App() {
         <NavBar authenticated={authenticated} signOut={signOut} />
       </header>
 
-      <Routes>
-        <Route path="/register" element={<Register />} />
-        <Route
-          path="/signIn"
-          element={
-            <Login
-              setUser={setUser}
-              toggleAuthenticated={toggleAuthenticated}
-            />
-          }
-        />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/signIn"
+            element={
+              <Login
+                setUser={setUser}
+                toggleAuthenticated={toggleAuthenticated}
+              />
+            }
+          />
+        </Routes>
+      </main>
     </div>
   )
 }

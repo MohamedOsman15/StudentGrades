@@ -24,10 +24,11 @@ const Login = ({ setUser, toggleAuthenticated }) => {
       <h1>Sign In</h1>
       <form onSubmit={(e) => handleSubmit(e)} className="loginForm">
         <div>
-          <h3>Email:</h3>
+          <label htmlFor="email">Email:</label>
           <input
             type="text"
             onChange={handleChange}
+            id="email"
             name="email"
             placeholder="example@example.com"
             value={formValues.email}
@@ -35,22 +36,25 @@ const Login = ({ setUser, toggleAuthenticated }) => {
           />
         </div>
         <div>
-          <h3>Password:</h3>
+          <label htmlFor="password">Password:</label>
           <input
             type="text"
             onChange={handleChange}
+            id="password"
             name="password"
             placeholder="password"
             value={formValues.password}
             required
           />
         </div>
-        <button>Submit</button>
+        <button className="btn">Submit</button>
       </form>
 
-      <div>
+      <div className="register-prompt">
         <p>Don't have an account?</p>
-        <Link to="/register">Register</Link>
+        <Link className="btn" to="/register">
+          Register
+        </Link>
       </div>
     </div>
   )
