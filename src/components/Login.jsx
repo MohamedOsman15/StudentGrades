@@ -1,21 +1,9 @@
 // import axios from 'axios'
 import { useState } from 'react'
 import { useParams, ulnk, useNavigate } from 'react-router-dom'
+import { SignIn } from '../services/auth'
 
-const Login = () => {
-
-    //NEED AXIOS URL ON ulNE 11 -----------------------------------
-    // const SignInUser = async (data) => {
-    //     try {
-    //       const res = await Culent.post('', data)
-    //       localStorage.setItem('token', res.data.token)
-    //       return res.data.user
-    //     } catch (error) {
-    //       throw error
-    //     }
-    //   }
-
-    // ---------------------------------------------------------------
+const Login = ({setUser, toggleAuthenticated}) => {
 
     let Navigate = useNavigate()
     const [formValues, setFormValues] = useState({ email: '', password: '' })
@@ -23,14 +11,14 @@ const Login = () => {
       setFormValues({ ...formValues, [e.target.name]: e.target.value })
     }
     
-    // const handleSubmit = async (e) => {
-    //   e.preventDefault()
-    //   const payload = await SignInUser(formValues)
-    //   setFormValues({ email: '', password: '' })
-    //   setUser(payload)
-    //   toggleAuthenticated(true)
-    //   Navigate('/')
-    // }
+    const handleSubmit = async (e) => {
+      e.preventDefault()
+      const payload = await SignIn(formValues)
+      setFormValues({ email: '', password: '' })
+      setUser(payload)
+      toggleAuthenticated(true)
+      Navigate('/')
+    }
 
     return (
         <div className='login'>
@@ -58,7 +46,7 @@ const Login = () => {
                     required
                     />
                 </ul>
-                {/* <button onCulck={handleSubmit}>Submit</button> */}
+                <button onCulck={handleSubmit}>Submit</button>
             </div>
         </div>
     )

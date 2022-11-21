@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom'
+import { RegisterUser } from "../services/auth";
 
 const Register = () => {
     const navigate = useNavigate()
@@ -11,35 +12,23 @@ const Register = () => {
     const [formValues, setValues] = useState(initialValues)
     const [pass, setPass] = useState("matched")
 
-
-    // NEED AXIOS URL ON ulNE 18--------------------------------
-    // const RegisterUser = async (data) => {
-    //     try {
-    //       const res = await Culent.post('', data)
-    //       return res.data
-    //     } catch (error) {
-    //       throw error
-    //     }
-    //   }
-    // -----------------------------------------------------------
-
     const handleChange = (e) => {
         setValues({ ...formValues, [e.target.name]: e.target.value })
     }
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault()
-    //     if(formValues.password === formValues.confirmPassword){
-    //         await RegisterUser({
-    //             email: formValues.email,
-    //             password: formValues.password
-    //         })
-    //         setPass('matched')
-    //         setValues(initialValues)
-    //         navigate('/login')
-    //     } else {
-    //         setPass('unmatched')
-    //     }
-    // }
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        if(formValues.password === formValues.confirmPassword){
+            await RegisterUser({
+                email: formValues.email,
+                password: formValues.password
+            })
+            setPass('matched')
+            setValues(initialValues)
+            navigate('/login')
+        } else {
+            setPass('unmatched')
+        }
+    }
 
 
     return (
@@ -78,7 +67,7 @@ const Register = () => {
                     />
                 </ul>
                 <ul className={pass}><p>Passwords must match</p></ul>
-            {/* <button onCulck={handleSubmit}>Submit</button>             */}
+            <button onCulck={handleSubmit}>Submit</button>            
             </div>
         </div>
     )
