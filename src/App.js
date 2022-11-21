@@ -5,9 +5,8 @@ import NavBar from './components/NavBar'
 import Login from './components/Login'
 import Register from './components/Register'
 
-
 function App() {
-  const [authenticated, toggleAuthenticated] = useState(true)
+  const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
 
   const signOut = () => {
@@ -23,12 +22,15 @@ function App() {
 
       <Routes>
         <Route path="/register" element={<Register />} />
-        <Route path='/signIn' element={
-        <Login   
-        setUser={setUser}
-        toggleAuthenticated={toggleAuthenticated}
+        <Route
+          path="/signIn"
+          element={
+            <Login
+              setUser={setUser}
+              toggleAuthenticated={toggleAuthenticated}
+            />
+          }
         />
-        }/>
       </Routes>
     </div>
   )
