@@ -20,11 +20,10 @@ function App() {
       <header>
         <NavBar authenticated={authenticated} signOut={signOut} />
       </header>
-      <h1>Student Grades</h1>
 
       <Routes>
-        <Route path="/" element={<Register />} />
-        <Route path='/login' element={
+        <Route path="/register" element={<Register />} />
+        <Route path='/signIn' element={
         <Login   
         setUser={setUser}
         toggleAuthenticated={toggleAuthenticated}
