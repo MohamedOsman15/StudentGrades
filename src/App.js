@@ -14,6 +14,7 @@ function App() {
   const signOut = () => {
     toggleAuthenticated(false)
     setUser(null)
+    localStorage.clear()
   }
 
   const checkToken = async () => {
