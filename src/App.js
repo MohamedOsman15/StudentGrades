@@ -2,12 +2,11 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import NavBar from './components/NavBar'
-import Login from './components/Login'
+import Signin from './components/routes/Signin'
 import Register from './components/Register'
 
-
 function App() {
-  const [authenticated, toggleAuthenticated] = useState(true)
+  const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
 
   const signOut = () => {
@@ -23,8 +22,7 @@ function App() {
       <h1>Student Grades</h1>
 
       <Routes>
-        <Route path="/" element={<Register />} />
-        <Route path='/login' element={<Login />} />
+        <Route path="/signin" element={<Signin />} />
       </Routes>
     </div>
   )
