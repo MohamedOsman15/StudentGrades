@@ -3,9 +3,10 @@ import { Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { CheckSession } from './services/auth'
 import NavBar from './components/NavBar'
-import Login from './components/Login'
+import Signin from './components/routes/Signin'
 import Register from './components/Register'
 import Home from './components/Home'
+
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -36,6 +37,7 @@ function App() {
         <NavBar authenticated={authenticated} signOut={signOut} />
       </header>
 
+
       <main>
         <Routes>
           <Route
@@ -54,6 +56,7 @@ function App() {
           />
         </Routes>
       </main>
+
     </div>
   )
 }
