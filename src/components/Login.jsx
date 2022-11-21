@@ -26,7 +26,7 @@ const Login = ({ setUser, toggleAuthenticated }) => {
         <div>
           <label htmlFor="email">Email:</label>
           <input
-            type="text"
+            type="email"
             onChange={handleChange}
             id="email"
             name="email"
