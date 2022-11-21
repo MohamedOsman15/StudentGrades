@@ -1,7 +1,7 @@
 // import axios from 'axios'
 import { useState } from 'react'
 import { useParams, ulnk, useNavigate, Link } from 'react-router-dom'
-import { SignIn } from '../services/auth'
+import { SignInUser } from '../services/auth'
 
 const Login = ({ setUser, toggleAuthenticated }) => {
   let navigate = useNavigate()
@@ -12,7 +12,7 @@ const Login = ({ setUser, toggleAuthenticated }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const payload = await SignIn(formValues)
+    const payload = await SignInUser(formValues)
     setFormValues({ email: '', password: '' })
     setUser(payload)
     toggleAuthenticated(true)
@@ -38,7 +38,7 @@ const Login = ({ setUser, toggleAuthenticated }) => {
         <div>
           <label htmlFor="password">Password:</label>
           <input
-            type="text"
+            type="password"
             onChange={handleChange}
             id="password"
             name="password"

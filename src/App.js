@@ -7,7 +7,7 @@ import Register from './components/Register'
 import Home from './components/Home'
 
 function App() {
-  const [authenticated, toggleAuthenticated] = useState(true)
+  const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
 
   const signOut = () => {
