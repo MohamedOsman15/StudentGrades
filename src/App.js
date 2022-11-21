@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { CheckSession } from './services/auth'
 import NavBar from './components/NavBar'
-import Signin from './components/routes/Signin'
+import Login from './components/Login'
 import Register from './components/Register'
 import Home from './components/Home'
 
