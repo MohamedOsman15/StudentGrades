@@ -90,7 +90,7 @@ main {
   color: red;
 }
 
-form input {
+form, input, .search-student-input{
   background-color: #23222a;
   color: #dad7da;
   padding: 0.75rem 1.5rem;
@@ -168,3 +168,12 @@ form .btn {
   display: flex;
   justify-content: flex-end;
 }
+
+.search-student-div {
+  text-align: center;
+  margin: 0 14vw 0 14vw;
+  padding-bottom: 3vh;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+

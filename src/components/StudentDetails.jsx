@@ -9,7 +9,14 @@ const StudentDetails = () => {
 
   useEffect(() => {
     GetStudentDetails(id)
-      .then((res) => setStudent(res.data))
+      .then((res) => {
+        console.log(res)
+        setStudent(res.data)
+
+        const calculatedGpa = calculateGpa(res.data.class_list)
+        setGpa(calculatedGpa)
+      })
+
       .catch((err) => console.log(err))
   }, [])
 
