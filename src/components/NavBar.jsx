@@ -4,7 +4,7 @@ const NavBar = (props) => {
   return (
     <nav className="navbar">
       <Link className="logo links" to="/">
-        Student Grades
+        Teacher Hub
       </Link>
 
       <div className="links-container">

@@ -1,8 +1,8 @@
 const ClassCard = ({ course }) => {
   return (
     <div className="class-card">
-      <p>{course.className}</p>
-      <p>{course.gradeLevel}</p>
+      <p><b>Course Name: </b>{course.className}</p>
+      <p><b>Grade Level: </b>{course.gradeLevel}</p>
     </div>
   )
 }
