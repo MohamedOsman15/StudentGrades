@@ -11,6 +11,7 @@ const StudentDetails = () => {
   useEffect(() => {
     GetStudentDetails(id)
       .then((res) => {
+        console.log(res)
         setStudent(res.data)
 
         const calculatedGpa = calculateGpa(res.data.class_list)
