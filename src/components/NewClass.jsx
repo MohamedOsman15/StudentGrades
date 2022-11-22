@@ -50,7 +50,7 @@ const NewClass = () => {
             onChange={handleChange}
             id="gradeLevel"
             name="gradeLevel"
-            placeholder="Grade #"
+            placeholder="Grade Level"
             value={formValues.gradeLevel}
             required
           />
