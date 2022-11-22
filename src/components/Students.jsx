@@ -31,9 +31,11 @@ let studentRaw = 0
               <div className="classes-on-card">
                <h4 className="card-classes-label">Classes:</h4>
                  {class_list.map((element, j) => (
-                   <div key={j}className="classes-on-card">{element.className} - <i>Current Score: {element.StudentClassList.score}</i>{studentRaw = studentRaw + element.StudentClassList.score}</div>
+                   <div key={j}className="classes-on-card">{element.className} - <i>Current Score: {element.StudentClassList.score}</i>
+                   <div className="gpa-inv">{studentRaw = studentRaw + element.StudentClassList.score}</div>
+                   </div>
                    ))}
-                   <div className="gpa"><b>Overall GPA:</b> {studentRaw/class_list.length+1}</div>
+                   <div className="gpa"><b>Overall GPA:</b> {studentRaw/class_list.length}</div>
                </div>
                   <div className="gpa-inv">{studentRaw=0}</div>
           </div>
