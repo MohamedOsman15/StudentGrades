@@ -1,11 +1,10 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { GetStudentDetails } from '../services'
-import { convertToLetterGrade, calculateGpa } from '../utils'
+import { convertToLetterGrade } from '../utils'
 
 const StudentDetails = () => {
   const [student, setStudent] = useState(null)
-  const [gpa, setGpa] = useState(null)
   const { id } = useParams()
 
   useEffect(() => {
@@ -17,6 +16,7 @@ const StudentDetails = () => {
         const calculatedGpa = calculateGpa(res.data.class_list)
         setGpa(calculatedGpa)
       })
+
       .catch((err) => console.log(err))
   }, [])
 
@@ -38,10 +38,6 @@ const StudentDetails = () => {
                 </p>
               </div>
             ))}
-          </div>
-
-          <div className="gpa-container">
-            <p>GPA: {gpa}</p>
           </div>
         </div>
       )}
