@@ -51,7 +51,7 @@ const Login = ({ setUser, toggleAuthenticated }) => {
 
       <div className="register-prompt">
         <p>Don't have an account?</p>
-        <Link className="btn" to="/register">
+        <Link className="btn" name="submit" to="/register">
           Register
         </Link>
       </div>
