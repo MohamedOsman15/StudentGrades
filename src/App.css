@@ -123,5 +123,43 @@ form .btn {
 }
 
 .student-card, .class-card {
+  border-bottom: 1px solid grey;
+  cursor: pointer;
   padding: 2rem 0;
+  transition: all 0.3s ease;
+}
+
+.student-card:hover, .class-card:hover {
+  color: #76f9c2;
+  border-color: #76f9c2;
+}
+
+.grades-grid .grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom: 1px solid grey;
+}
+
+.grades-grid .course {
+  padding: 0 2rem;
+  border-right: 1px solid grey;
+}
+
+.grades-grid .letter-grade {
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.homepage-links {
+  margin-top: 3rem;
+}
+
+.homepage-links .btn {
+  margin: 0 0.5rem;
 }
