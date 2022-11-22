@@ -24,7 +24,7 @@ const Register = () => {
         password: formValues.password
       })
       setPass('matched')
-      // setValues(initialValues)
+      setValues(initialValues)
       navigate('/')
     } else {
       setPass('unmatched')

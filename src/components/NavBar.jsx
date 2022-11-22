@@ -8,22 +8,12 @@ const NavBar = (props) => {
       </Link>
 
       <div className="links-container">
-        {props.authenticated ? (
+        {props.authenticated && (
           <div>
-            <Link className="links" to="/students">
-              Students
-            </Link>
-            <Link className="links" to="/classes">
-              Classes
-            </Link>
             <Link className="links" onClick={props.signOut}>
               Sign Out
             </Link>
           </div>
-        ) : (
-          <Link className="links" to="/signin">
-            Sign In
-          </Link>
         )}
       </div>
     </nav>
