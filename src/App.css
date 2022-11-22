@@ -121,3 +121,7 @@ form .btn {
 .register-prompt p {
   margin-bottom: 1rem;
 }
+
+.student-card, .class-card {
+  padding: 2rem 0;
+}

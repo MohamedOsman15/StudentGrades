@@ -7,6 +7,10 @@ import Register from './components/Register'
 import Home from './components/Home'
 import Login from './components/Login'
 import NotFound from './components/NotFound'
+import Students from './components/Students'
+import Classes from './components/Classes'
+import NewStudent from './components/NewStudent'
+import NewClass from './components/NewClass'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -46,6 +50,10 @@ function App() {
               path="/"
               element={<Home user={user} authenticated={authenticated} />}
             />
+            <Route path="/students" element={<Students />} />
+            <Route path="/classes" element={<Classes />} />
+            <Route path="/students/new" element={<NewStudent />} />
+            <Route path="/classes/new" element={<NewClass />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         ) : (
