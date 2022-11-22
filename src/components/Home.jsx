@@ -11,7 +11,7 @@ const Home = ({ user, authenticated }) => {
         <h1>Welcome to Student Grade!</h1>
         <div className="homepage-links">
           <Link className="btn" to="/students">
-            View students
+            View Students
           </Link>{' '}
           <Link className="btn" to="/classes">
             View All Classes
