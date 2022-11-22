@@ -177,3 +177,16 @@ form .btn {
   border-bottom: 1px solid black;
 }
 
+@media screen and (max-width: 1000px) {
+  .homepage-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    width: 200px;
+    margin: auto;
+  }
+  
+  .home {
+    text-align: center;
+  }
+}
