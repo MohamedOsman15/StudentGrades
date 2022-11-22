@@ -122,6 +122,6 @@ form .btn {
   margin-bottom: 1rem;
 }
 
-.student-card {
+.student-card, .class-card {
   padding: 2rem 0;
 }

@@ -14,12 +14,13 @@ const Students = () => {
     <div className="students">
       <h1>Students</h1>
 
-      {students.map((student) => (
-        <div className="student-card">
-          <p>{student.name}</p>
-          <p>{student.email}</p>
-        </div>
-      ))}
+      {students &&
+        students.map((student) => (
+          <div key={student.id} className="student-card">
+            <p>{student.name}</p>
+            <p>{student.email}</p>
+          </div>
+        ))}
     </div>
   )
 }
