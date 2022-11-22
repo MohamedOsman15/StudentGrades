@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { GetAllStudents } from '../services'
 
 const Students = () => {
   const [students, setStudents] = useState(null)
+  let navigate = useNavigate()
 
   useEffect(() => {
     GetAllStudents()
@@ -16,7 +18,11 @@ const Students = () => {
 
       {students &&
         students.map((student) => (
-          <div key={student.id} className="student-card">
+          <div
+            key={student.id}
+            className="student-card"
+            onClick={() => navigate(`/students/${student.id}`)}
+          >
             <p>{student.name}</p>
             <p>{student.email}</p>
           </div>

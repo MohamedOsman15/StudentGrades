@@ -19,3 +19,13 @@ export const GetAllClasses = async () => {
     throw err
   }
 }
+
+export const GetStudentDetails = async (id) => {
+  try {
+    const res = Client.get(`/api/studentclasslist/${id}`)
+
+    return res
+  } catch (err) {
+    throw err
+  }
+}
