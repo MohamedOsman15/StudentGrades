@@ -1,10 +1,7 @@
-import { useEffect, useState } from 'react'
-import { Route, Routes, useParams, Link } from 'react-router-dom'
-import Client from '../services/api'
+import { Link } from 'react-router-dom'
 import React from 'react'
-import Students from './Students'
 
-const Home = ({ user, authenticated }) => {
+const Home = () => {
   return (
     <div className="home">
       <div>
