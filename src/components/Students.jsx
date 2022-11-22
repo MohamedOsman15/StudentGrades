@@ -15,7 +15,10 @@ const Students = () => {
     <div className="students">
       <h1>Students</h1>
 
-      {students && students.map((student) => <StudentCard student={student} />)}
+      <div className="students-container">
+        {students &&
+          students.map((student) => <StudentCard student={student} />)}
+      </div>
     </div>
   )
 }

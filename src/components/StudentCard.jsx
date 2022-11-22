@@ -4,15 +4,12 @@ const StudentCard = ({ student }) => {
   let navigate = useNavigate()
 
   return (
-    <div className="student-card">
-      <div
-        key={student.id}
-        className="student-card"
-        onClick={() => navigate(`/students/${student.id}`)}
-      >
-        <p>{student.name}</p>
-        <p>{student.email}</p>
-      </div>
+    <div
+      className="student-card"
+      onClick={() => navigate(`/students/${student.id}`)}
+    >
+      <h2>{student.name}</h2>
+      <h3>{student.email}</h3>
     </div>
   )
 }
