@@ -1,7 +1,8 @@
-const ClassCard = () => {
+const ClassCard = ({ course }) => {
   return (
     <div className="class-card">
-      <h1>Classes</h1>
+      <p>{course.className}</p>
+      <p>{course.gradeLevel}</p>
     </div>
   )
 }

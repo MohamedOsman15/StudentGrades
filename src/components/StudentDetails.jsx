@@ -23,7 +23,9 @@ const StudentDetails = () => {
           <div className="grades-grid">
             {student.class_list.map((course) => (
               <div key={course.id} className="grade">
-                <p className="course">{course.className}</p>
+                <p className="course">
+                  {`${course.className} ${course.gradeLevel}`}
+                </p>
                 <p className="letter-grade">
                   {convertToLetterGrade(course.StudentClassList.score)}
                 </p>

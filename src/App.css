@@ -150,8 +150,16 @@ form .btn {
   text-align: center;
 }
 
-.students-container {
+.grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 2rem;
+}
+
+.homepage-links {
+  margin-top: 3rem;
+}
+
+.homepage-links .btn {
+  margin: 0 0.5rem;
 }

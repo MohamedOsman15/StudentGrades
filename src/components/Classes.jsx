@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { GetAllClasses } from '../services'
+import ClassCard from './ClassCard'
 
 const Classes = () => {
   const [classes, setClasses] = useState(null)
@@ -14,13 +15,12 @@ const Classes = () => {
     <div className="classes">
       <h1>Classes</h1>
 
-      {classes &&
-        classes.map((course) => (
-          <div key={course.id} className="class-card">
-            <p>{course.className}</p>
-            <p>{course.gradeLevel}</p>
-          </div>
-        ))}
+      <div className="grid-container">
+        {classes &&
+          classes.map((course) => (
+            <ClassCard key={course.id} course={course} />
+          ))}
+      </div>
     </div>
   )
 }
