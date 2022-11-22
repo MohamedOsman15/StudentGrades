@@ -11,3 +11,13 @@ export const convertToLetterGrade = (score) => {
     return 'F'
   }
 }
+
+export const calculateGpa = (classListArr) => {
+  let total = null
+
+  for (let course of classListArr) {
+    total += course.StudentClassList.score
+  }
+
+  return total / classListArr.length
+}
