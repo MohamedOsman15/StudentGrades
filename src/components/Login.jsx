@@ -46,7 +46,7 @@ const Login = ({ setUser, toggleAuthenticated }) => {
             required
           />
         </div>
-        <button className="btn">Sign In</button>
+        <button className="btn login-submit">Sign In</button>
       </form>
 
       <div className="register-prompt">

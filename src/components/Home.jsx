@@ -8,9 +8,9 @@ const Home = ({ user, authenticated }) => {
   return (
     <div className="home">
       <div>
-        <h1>Welcome to Student Grade!</h1>
+        <h1>Welcome to Student Grades!</h1>
         <div className="homepage-links">
-          <Link to="/students">View students</Link> |{' '}
+          <Link to="/students">View Students</Link> |{' '}
           <Link to="/classes">View All Classes</Link> |{' '}
           <Link to="/classes/new">Create New Class</Link> |{' '}
           <Link to="/students/new">Enroll New Student</Link>

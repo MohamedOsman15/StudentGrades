@@ -43,8 +43,15 @@ p {
   color: #76f9c2;
 }
 
-.btn {
+.login .register-prompt {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+}
+
+.btn {
   text-decoration: none;
   border: none;
   outline: none;
@@ -76,7 +83,7 @@ p {
 
 main {
   width: fit-content;
-  margin: 5rem auto 0 auto;
+  margin: 3rem auto 0 auto;
   padding: 3rem;
   background-color: #373443;
   border-radius: 1rem;
@@ -111,17 +118,39 @@ form .btn {
   margin-top: 1rem;
 }
 
-.login .register-prompt {
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .register-prompt p {
   margin-bottom: 1rem;
 }
 
 .student-card, .class-card {
   padding: 2rem 0;
+  border-bottom: 2px solid rgb(67, 67, 67);
+}
+
+.homepage-links {
+  text-align: center;
+}
+
+a {
+  color:cadetblue
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+.classes-on-card {
+  margin-left: 3vw;;
+}
+
+.card-classes-label {
+  margin-bottom: 0;
+}
+
+.gpa {
+  margin-top: 10px;
+}
+
+.gpa-inv {
+  color: #373443;
 }
