@@ -12,13 +12,13 @@ const Home = ({ user, authenticated }) => {
         <div className="homepage-links">
           <Link className="btn" to="/students">
             View Students
-          </Link>{' '}
+          </Link>
           <Link className="btn" to="/classes">
             View All Classes
-          </Link>{' '}
+          </Link>
           <Link className="btn" to="/classes/new">
             Create New Class
-          </Link>{' '}
+          </Link>
           <Link className="btn" to="/students/new">
             Enroll New Student
           </Link>
